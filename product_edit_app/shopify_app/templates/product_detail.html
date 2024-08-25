@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ product.title }}</title>
+</head>
+
+<body>
+    <h1>{{ product.title }}</h1>
+    <p>{{ product.description }}</p>
+    <ul>
+        {% for variant in product.variants %}
+        <li>
+            SKU: {{ variant.sku }}
+            Price: {{ variant.price }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
